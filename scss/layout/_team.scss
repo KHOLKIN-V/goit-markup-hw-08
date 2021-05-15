@@ -1,56 +1,81 @@
 .team-container {
-  display: flex;
-  padding-top: 94px;
-  padding-bottom: 94px;
+  @media screen and (min-width: 480px) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
   background-color: $primary-bcg-color;
-  flex-direction: column;
 
   .h2-web {
     margin: 0 auto;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     background-color: $primary-bcg-color;
     text-align: center;
+
+    @media screen and (min-width: 1200px) {
+      margin-bottom: 50px;
+    }
   }
 }
 
 .names {
-  display: flex;
-  justify-content: center;
-
   &-item {
     width: 270px;
     background-color: $primary-white-color;
-
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
       0px 2px 1px rgba(0, 0, 0, 0.2);
+  }
 
-    &:not(:last-child) {
-      margin-right: 30px;
+  &-item:not(:last-child) {
+    @media screen and (max-width: 767px) {
+      margin-bottom: 30px;
+    }
+  }
+  @media screen and (min-width: 480px) {
+    h3 {
+      display: flex;
+      justify-content: center;
+      margin-top: 0;
+      margin-bottom: 10px;
+
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 1.19;
+      letter-spacing: 3%;
+      color: $title-text-color;
+    }
+
+    p {
+      display: flex;
+      justify-content: center;
+      margin: 0 auto;
+
+      font-weight: 400;
+      line-height: 1.19;
+      letter-spacing: 0.03em;
+      color: $primary-text-color;
     }
   }
 
-  h3 {
+  @media screen and (min-width: 768px) {
     display: flex;
-    justify-content: center;
-    margin-top: 0;
-    margin-bottom: 10px;
+    flex-wrap: wrap;
+    margin: -15px;
 
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.19;
-    letter-spacing: 3%;
-    color: $title-text-color;
+    &-item {
+      flex-basis: calc((100% - 4 * 15px) / 2);
+      margin: 15px;
+    }
   }
 
-  p {
-    display: flex;
-    justify-content: center;
-    margin: 0 auto;
-
-    font-weight: 400;
-    line-height: 1.19;
-    letter-spacing: 0.03em;
-    color: $primary-text-color;
+  @media screen and (min-width: 1200px) {
+    &-item {
+      flex-basis: calc((100% - 8 * 15px) / 4);
+    }
   }
 }
 
