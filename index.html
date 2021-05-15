@@ -77,26 +77,37 @@
 <!-- HEADER -->
     <header class="header">
         <div class="container">
-            <nav class="navig">
-                <a href="#" class="logo"><span>Web</span>Studio</a>
-                <ul class="navig-menu list-no-style">
-                    <li class="navig-menu__item studio"><a href="./index.html">Студия</a></li>
-                    <li class="navig-menu__item"><a href="./portfolio.html">Портфолио</a></li>
-                    <li class="navig-menu__item"><a href="#">Контакты</a></li>
+            <a href="#" class="logo"><span>Web</span>Studio</a>
+
+            <button type="button" class="burger is-open" data-menu-button aria-controls="mobile-navigation">
+                <svg width="40px" height="40px" aria-label="Переключатель мобильного меню">
+                    <use class="burger-open" href="./images/icons.svg#burger-open"></use>
+                    <use class="burger-close" href="./images/icons.svg#burger-close"></use>
+                </svg>
+            </button>
+
+            <div class="menu-container" id="mobile-navigation" data-menu>
+                <nav class="navig">
+                    <ul class="navig-menu list-no-style">
+                        <li class="navig-menu__item studio"><a href="./index.html">Студия</a></li>
+                        <li class="navig-menu__item"><a href="./portfolio.html">Портфолио</a></li>
+                        <li class="navig-menu__item"><a href="#">Контакты</a></li>
+                    </ul>
+                </nav>
+
+                <ul class="navig-address list-no-style ">
+                    <li class="navig-address__item"><a class="address-link" href="mailto:info@devstudio.com">
+                        <svg class="address-mail">
+                            <use href="./images/icons.svg#icon-envelope"></use>
+                        </svg>
+                        info@devstudio.com</a></li>
+                    <li class="navig-address__item"><a class="address-link" href="tel:+380961111111">
+                        <svg class="address-phone">
+                            <use href="./images/icons.svg#icon-smartphone"></use>
+                        </svg>
+                        +38 096 111 11 11</a></li>
                 </ul>
-            </nav>
-            <ul class="navig-address list-no-style ">
-                <li class="navig-address__item"><a class="address-link" href="mailto:info@devstudio.com">
-                    <svg class="address-mail">
-                        <use href="./images/icons.svg#icon-envelope"></use>
-                    </svg>
-                    info@devstudio.com</a></li>
-                <li class="navig-address__item"><a class="address-link" href="tel:+380961111111">
-                    <svg class="address-phone">
-                        <use href="./images/icons.svg#icon-smartphone"></use>
-                    </svg>
-                    +38 096 111 11 11</a></li>
-            </ul>
+            </div>
         </div>   
     </header>
 
@@ -369,7 +380,7 @@
                 <a href="#" class="logo logo-footer"><span>Web</span>Studio</a>
                 <address>
                     <p>г. Киев, пр-т Леси Украинки, 26</p>
-                    <ul class="list-no-style ">
+                    <ul class="address-footer list-no-style ">
                         <li class="address-footer__item"><a href="mailto:info@example.com">info@example.com</a></li>
                         <li class="address-footer__item"><a href="tel:+380991111111">+38 099 111 11 11</a></li>
                     </ul>
@@ -416,5 +427,6 @@
     </footer>
 
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
 </body>
 </html>

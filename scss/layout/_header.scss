@@ -2,12 +2,14 @@
   border-bottom: 1px solid $header-border-color;
 
   & .container {
+    position: relative;
     display: flex;
     align-items: center;
     padding-top: 24px;
     padding-bottom: 24px;
   }
   & .navig {
+    position: relative;
     display: flex;
     align-items: center;
 
@@ -118,5 +120,43 @@
   }
   &:hover .address-phone {
     fill: $accent-color;
+  }
+}
+
+.burger {
+  display: inline-flex;
+  margin: 0;
+  padding: 16px 24px;
+  border: none;
+  background-color: aqua;
+
+  .burger-close {
+    display: none;
+  }
+}
+
+.burger.is-open {
+  .burger-close {
+    display: block;
+  }
+  .burger-open {
+    display: none;
+  }
+}
+
+.menu-container {
+  display: none;
+
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+
+  padding: 20px;
+  text-align: center;
+  font-size: 20px;
+
+  &.is-open {
+    display: block;
   }
 }
