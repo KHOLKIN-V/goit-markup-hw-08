@@ -1,0 +1,25 @@
+/* цвет основного текста #212121 */
+/* вторичный цвет текста  #757575 */
+/* header #000000 */
+/* footer rgba(255,255,255,0.6) */
+/* белый #FFFFFF  */
+/* акцент #2196F3 */
+/* вторичный цвет фона #F5F4FA; */
+
+@import './utils/variables';
+@import './base/common';
+
+@import './components/buttons';
+@import './components/logo';
+
+@import './layout/header';
+@import './layout/hero';
+@import './layout/advantages';
+@import './layout/about';
+@import './layout/team';
+@import './layout/clients';
+@import './layout/filter';
+@import './layout/works';
+@import './layout/footer';
+
+@import './components/modal';

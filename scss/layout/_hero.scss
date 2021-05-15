@@ -1,0 +1,50 @@
+.hero-container {
+  min-height: 600px;
+  max-width: 1600px;
+  padding-top: 200px;
+  text-align: center;
+  margin: 0 auto;
+
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../../images/HERO.jpg);
+  background-color: $hero-alt-color;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto;
+
+  &__slogan {
+    width: 696px;
+    margin-bottom: 30px;
+    margin-top: 0;
+    margin-left: auto;
+    margin-right: auto;
+
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.16;
+    letter-spacing: 0.06em;
+    color: $primary-white-color;
+    text-transform: uppercase;
+  }
+
+  &__button {
+    width: 200px;
+    height: 50px;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    outline: none;
+
+    font-weight: 700;
+    line-height: 1.6;
+    letter-spacing: 0.06em;
+    color: $primary-white-color;
+    background-color: $accent-color;
+  }
+}

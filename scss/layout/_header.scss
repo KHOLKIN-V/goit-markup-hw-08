@@ -1,0 +1,122 @@
+.header {
+  border-bottom: 1px solid $header-border-color;
+
+  & .container {
+    display: flex;
+    align-items: center;
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+  & .navig {
+    display: flex;
+    align-items: center;
+
+    & .logo {
+      margin-right: 93px;
+    }
+  }
+  & .navig-menu {
+    display: flex;
+    align-items: center;
+  }
+
+  & .navig-address {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+  }
+}
+
+.navig-menu__item {
+  &:not(:last-child) {
+    margin-right: 40px;
+  }
+  & a {
+    position: relative;
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.02em;
+    color: $title-text-color;
+    background-color: $primary-white-color;
+    text-decoration: none;
+
+    transition: color 250ms $timing-function;
+
+    &::after {
+      content: '';
+      position: absolute;
+      display: block;
+      left: 0;
+      bottom: -1px;
+      width: 100%;
+      height: 4px;
+      border-radius: 2px;
+      background-color: $accent-color;
+      opacity: 0;
+
+      transition: opacity 250ms $timing-function;
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: $accent-color;
+    }
+  }
+}
+
+.studio a,
+.portfolio a {
+  color: $accent-color;
+
+  &::after,
+  &::after {
+    opacity: 1;
+  }
+}
+
+.navig-address__item {
+  &:not(:last-child) {
+    margin-right: 50px;
+  }
+  .address-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 14px;
+    line-height: 1.14px;
+    letter-spacing: 0.02em;
+    color: $primary-text-color;
+    background-color: $primary-white-color;
+    text-decoration: none;
+    transition: color 250ms $timing-function;
+  }
+  &:hover .address-link,
+  &:focus .address-link {
+    color: $accent-color;
+  }
+  .address-mail {
+    fill: $primary-text-color;
+    width: 16px;
+    height: 12px;
+    margin-right: 10px;
+    transition: fill 250ms $timing-function;
+  }
+  .address-phone {
+    fill: $primary-text-color;
+    width: 10px;
+    height: 16px;
+    margin-right: 10px;
+    transition: fill 250ms $timing-function;
+  }
+  &:hover .address-mail {
+    fill: $accent-color;
+  }
+  &:hover .address-phone {
+    fill: $accent-color;
+  }
+}
