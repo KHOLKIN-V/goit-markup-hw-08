@@ -14,6 +14,12 @@
   background-position: center;
   background-size: cover;
 
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: url('../../images/HERO@2x.jpg');
+  }
+
   &__slogan {
     width: 360px;
     margin: 0 auto;
