@@ -74,19 +74,44 @@
         </div>        
     </div>
 
+<!-- MOBILE -->
+<div class="mobile">
+    <a href="#" class="logo"><span>Web</span>Studio</a>
+
+    <button type="button" class="burger is-open" data-menu-button aria-controls="mobile-navigation">
+        <svg width="24px" height="16px" aria-label="Переключатель мобильного меню">
+            <use class="burger-open" href="./images/icons.svg#burger-open"></use>
+            <use class="burger-close" href="./images/icons.svg#burger-close"></use>
+        </svg>
+    </button>
+    
+    <div class="mobile-container" id="mobile-navigation" data-menu>
+        <ul class="mobile-menu list-no-style">
+            <li class="mobile-menu__item studio"><a href="./index.html">Студия</a></li>
+            <li class="mobile-menu__item"><a href="./portfolio.html">Портфолио</a></li>
+            <li class="mobile-menu__item"><a href="#">Контакты</a></li>
+        </ul>
+        <div class="mobile-container__bottom">
+            <a class="mobile-address__phone" href="tel:+380961111111">
+                +38 096 111 11 11</a>
+            <a class="mobile-address__mail" href="mailto:info@devstudio.com">
+                info@devstudio.com</a>
+
+            <ul class="mobile-social list-no-style">
+                <li class="mobile-social__item"><a href="#" class="mobile-social__link" aria-label="инстаграм">Instagram</a></li>
+                <li class="mobile-social__item"><a href="#" class="mobile-social__link" aria-label="твиттер">Twitter</a></li>
+                <li class="mobile-social__item"><a href="#" class="mobile-social__link" aria-label="фейсбук">Facebook</a></li>
+                <li class="mobile-social__item"><a href="#" class="mobile-social__link" aria-label="линкед-ин">LinkedIn</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- /MOBILE -->
+
 <!-- HEADER -->
     <header class="header">
         <div class="container">
             <a href="#" class="logo"><span>Web</span>Studio</a>
-
-            <button type="button" class="burger is-open" data-menu-button aria-controls="mobile-navigation">
-                <svg width="40px" height="40px" aria-label="Переключатель мобильного меню">
-                    <use class="burger-open" href="./images/icons.svg#burger-open"></use>
-                    <use class="burger-close" href="./images/icons.svg#burger-close"></use>
-                </svg>
-            </button>
-
-            <div class="menu-container" id="mobile-navigation" data-menu>
                 <nav class="navig">
                     <ul class="navig-menu list-no-style">
                         <li class="navig-menu__item studio"><a href="./index.html">Студия</a></li>
@@ -107,7 +132,6 @@
                         </svg>
                         +38 096 111 11 11</a></li>
                 </ul>
-            </div>
         </div>   
     </header>
 

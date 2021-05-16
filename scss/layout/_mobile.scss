@@ -1,0 +1,140 @@
+.mobile {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+
+  .logo {
+    padding-left: 15px;
+  }
+}
+.burger {
+  display: inline-flex;
+  margin: 0;
+  margin-right: 15px;
+  padding: 12px 8px;
+  border: none;
+  background-color: aqua;
+  z-index: 1;
+
+  .burger-open {
+    display: none;
+  }
+}
+
+.burger.is-open {
+  .burger-close {
+    display: none;
+  }
+  .burger-open {
+    display: block;
+  }
+}
+
+.mobile-container {
+  display: flex;
+  flex-direction: column;
+  align-items: space-between;
+  background-color: peachpuff;
+  padding-left: 40px;
+
+  @media screen and (max-width: 767px) {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vw;
+
+    &.is-open {
+      display: block;
+    }
+  }
+
+  &__bottom {
+    display: block;
+  }
+}
+
+.mobile-menu {
+  margin-top: 48px;
+
+  &__item {
+    text-align: left;
+    & a {
+      font-size: 40px;
+      line-height: 1.17;
+      letter-spacing: 0.02em;
+      color: $title-text-color;
+      text-decoration: none;
+
+      transition: color 250ms $timing-function;
+
+      &:hover,
+      &:focus,
+      &:active {
+        color: $accent-color;
+      }
+    }
+  }
+}
+
+.mobile-address {
+  &__phone {
+    display: block;
+    text-align: left;
+    margin-bottom: 32px;
+
+    font-weight: 500;
+    font-size: 34px;
+    line-height: 1.18;
+    letter-spacing: 0.02em;
+    color: $accent-color;
+    text-decoration: none;
+  }
+
+  &__mail {
+    display: block;
+    text-align: left;
+    margin-bottom: 64px;
+
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1.16;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+    color: $primary-text-color;
+  }
+}
+
+.mobile-social {
+  display: flex;
+  justify-content: flex-start;
+  margin-left: -10px;
+  margin-right: -10px;
+
+  &__item {
+    padding-left: 10px;
+    padding-right: 10px;
+
+    &:not(:last-child) {
+      border-right: 1px solid rgba(33, 33, 33, 0.2);
+    }
+
+    & a {
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 1.22;
+      letter-spacing: 0.02em;
+      color: $accent-color;
+      text-decoration: none;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .mobile {
+    display: none;
+  }
+}
