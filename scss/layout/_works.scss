@@ -11,7 +11,7 @@
   .projects-list {
     @media screen and (min-width: 768px) {
       display: flex;
-      justify-content: center;
+      justify-content: flex-start;
       align-items: center;
       flex-wrap: wrap;
       margin: -15px;
@@ -20,6 +20,7 @@
 }
 
 .projects-item {
+  max-width: 370px;
   transition: box-shadow 250ms $timing-function;
 
   &:not(:last-child) {
@@ -81,7 +82,7 @@
   }
 
   &__description {
-    width: 370px;
+    width: 100%;
     padding: 20px 24px;
     border-right: 1px solid $projects-border-color;
     border-left: 1px solid $projects-border-color;

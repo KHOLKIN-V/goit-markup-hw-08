@@ -3,10 +3,28 @@
   justify-content: center;
   flex-wrap: wrap;
   padding-bottom: 0;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
+
+  @media screen and (max-width: 767px) {
+    justify-content: flex-start;
+  }
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 30px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 50px;
+  }
 
   li:not(:last-child) {
     margin-right: 8px;
+  }
+
+  li {
+    @media screen and (max-width: 767px) {
+      margin-bottom: 15px;
+    }
   }
 
   .works-filter__button {
