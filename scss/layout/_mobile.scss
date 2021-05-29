@@ -2,8 +2,9 @@
   position: relative;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  height: 60px;
+  align-items: flex-start;
+  height: 100%;
+  width: 100%;
 
   .logo {
     padding-left: 15px;
@@ -72,6 +73,11 @@
   &__item {
     &:not(:last-child) {
       padding-bottom: 32px;
+    }
+
+    &:hover,
+    &:focus {
+      color: $accent-color;
     }
 
     & a {

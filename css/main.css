@@ -480,7 +480,7 @@ body {
 @media screen and (min-width: 480px) {
   .names-item {
     margin: 0 auto;
-    max-width: 270px;
+    max-width: 450px;
     background-color: #ffffff;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   }
@@ -519,8 +519,7 @@ body {
   .names-item {
     flex-basis: calc((100% - 4 * 15px) / 2);
     margin: 15px;
-    width: 354px;
-    height: 374px;
+    max-width: 354px;
   }
   .names-item img {
     width: 354px;
@@ -531,6 +530,7 @@ body {
 @media screen and (min-width: 1200px) {
   .names-item {
     flex-basis: calc((100% - 8 * 15px) / 4);
+    max-width: 270px;
   }
   .names-item img {
     width: 270px;
@@ -538,11 +538,22 @@ body {
   }
 }
 
-.profession {
-  padding-top: 30px;
-  padding-bottom: 30px;
-  padding-left: 32px;
-  padding-right: 32px;
+@media screen and (min-width: 480px) {
+  .profession {
+    padding: 30px 122px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .profession {
+    padding: 30px 74px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .profession {
+    padding: 30px 32px;
+  }
 }
 
 .profession .team-icons {
@@ -1121,8 +1132,9 @@ body {
   position: relative;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  height: 60px;
+  align-items: flex-start;
+  height: 100%;
+  width: 100%;
 }
 
 .mobile .logo {
@@ -1192,6 +1204,10 @@ body {
 
 .mobile-menu__item:not(:last-child) {
   padding-bottom: 32px;
+}
+
+.mobile-menu__item:hover, .mobile-menu__item:focus {
+  color: #2196f3;
 }
 
 .mobile-menu__item a {
